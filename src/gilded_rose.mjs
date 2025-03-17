@@ -5,6 +5,14 @@ export class Item {
     this.quality = quality;
   }
 
+  incQuality(n) {
+    while (n-- > 0 && this.quality < 50) this.quality++;
+  }
+
+  decQuality(n) {
+    while (n-- > 0 && this.quality > 0) this.quality--;
+  }
+
   toJSON() {
     return { name: this.name, quality: this.quality, sellIn: this.sellIn };
   }
