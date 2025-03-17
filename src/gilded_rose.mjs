@@ -4,6 +4,10 @@ export class Item {
     this.sellIn = sellIn;
     this.quality = quality;
   }
+
+  toJSON() {
+    return { name: this.name, quality: this.quality, sellIn: this.sellIn };
+  }
 }
 
 export class Shop {
