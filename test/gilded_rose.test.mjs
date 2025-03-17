@@ -3,14 +3,6 @@ import { expect } from "chai";
 import { Item, Shop } from "../src/gilded_rose.mjs";
 
 describe("Gilded Rose", () => {
-  test("Item.toJSON() works", () => {
-    expect(new Item("serializable", 5, 5).toJSON()).to.deep.equal({
-      name: "serializable",
-      sellIn: 5,
-      quality: 5,
-    });
-  });
-
   test("empty Shop", () => {
     const empty = new Shop();
     const doingEmpty = () => empty.updateQuality();

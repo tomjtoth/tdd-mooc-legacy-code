@@ -12,10 +12,6 @@ export class Item {
   decQuality(n) {
     while (n-- > 0 && this.quality > 0) this.quality--;
   }
-
-  toJSON() {
-    return { name: this.name, quality: this.quality, sellIn: this.sellIn };
-  }
 }
 
 export class Shop {
