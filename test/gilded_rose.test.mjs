@@ -25,7 +25,7 @@ describe("Gilded Rose", () => {
     expect(doingEmpty()).to.deep.equal([]);
 
     const gildedRose = new Shop(dummies);
-    const items = gildedRose.updateQuality();
+    const items = gildedRose.updateQuality(true);
     expect(items).to.deep.equal([
       {
         name: "foo",
