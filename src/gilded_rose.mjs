@@ -35,6 +35,10 @@ export class Shop {
           else item.incQuality(1);
           break;
 
+        case "Conjured":
+          item.decQuality(--item.sellIn < 0 ? 4 : 2);
+          break;
+
         case "Sulfuras, Hand of Ragnaros":
           break;
 
