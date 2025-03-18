@@ -91,13 +91,32 @@ describe("Gilded Rose", () => {
     }
   });
 
-  test("Sulfuras does not change", () => {
+  test("Conjured items degrade 2x as fast as normal items", () => {
+    const shop = new Shop([new Item("Conjured", 4, 30)]);
+
+    for (const [sellIn, quality] of [
+      [3, 28],
+      [2, 26],
+      [1, 24],
+      [0, 22],
+      [-1, 18],
+      [-2, 14],
+      [-3, 10],
+    ]) {
+      const [item] = shop.updateQuality();
+
+      expect(item.quality).to.equal(quality);
+      expect(item.sellIn).to.equal(sellIn);
+    }
+  });
+
+  test("Sulfuras is constantly 80 points", () => {
     const shop = new Shop([new Item("Sulfuras, Hand of Ragnaros", 2, 5)]);
 
     for (const [sellIn, quality] of [
-      [2, 5],
-      [2, 5],
-      [2, 5],
+      [2, 80],
+      [2, 80],
+      [2, 80],
     ]) {
       const [item] = shop.updateQuality();
 
