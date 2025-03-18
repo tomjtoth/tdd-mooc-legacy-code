@@ -1,5 +1,7 @@
 # [TDD MOOC](https://tdd.mooc.fi/): Legacy code
 
+**Link to [mutation report](./coverage/mutation-report/index.html)**
+
 This is an exercise to practice dealing with legacy code. There are three things you need to do:
 
 1. **Write test for the code [src/gilded_rose.mjs](src/gilded_rose.mjs), until it has 100% mutation test coverage.**
