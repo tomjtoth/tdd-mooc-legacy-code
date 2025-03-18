@@ -2,7 +2,7 @@ export class Item {
   constructor(name, sellIn, quality) {
     this.name = name;
     this.sellIn = sellIn;
-    this.quality = quality;
+    this.quality = name === "Sulfuras, Hand of Ragnaros" ? 80 : quality;
   }
 
   incQuality(n) {
